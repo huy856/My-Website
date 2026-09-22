@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DƯƠNG NHẬT HUY - Liên hệ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>DƯƠNG NHẬT HUY</h1>
+    <p>Sinh viên ngành Công nghệ thông tin - Năm 2</p>
+
+    <nav>
+      <a href="index.html">Trang chủ</a> |
+      <a href="about.html">Giới thiệu</a> |
+      <a href="contact.html">Liên hệ</a> |
+      <a href="https://github.com/huy856/My-Website" target="_blank" rel="noopener">GitHub Repo</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Liên hệ với tôi</h2>
+
+      <form action="#" method="POST">
+
+        <fieldset>
+          <legend>Thông tin cá nhân</legend>
+
+          <label for="fullname">Họ và tên: *</label>
+          <input type="text" id="fullname" name="fullname" 
+                 placeholder="Nhập họ tên đầy đủ" 
+                 required minlength="2" maxlength="100">
+
+          <label for="email">Email: *</label>
+          <input type="email" id="email" name="email" 
+                 placeholder="example@gmail.com" required>
+
+          <label for="phone">Số điện thoại:</label>
+          <input type="tel" id="phone" name="phone" 
+                 placeholder="09xx xxx xxx" 
+                 pattern="[0-9]{10,11}" 
+                 title="Nhập 10-11 chữ số">
+
+          <!-- Thêm Yêu cầu nâng cao 23, 24 từ đề bài -->
+          <label for="dob">Ngày sinh:</label>
+          <input type="date" id="dob" name="dob">
+
+          <label for="university">Trường Đại học:</label>
+          <input type="text" id="university" name="university" list="school-list" placeholder="Chọn hoặc nhập tên trường...">
+          <datalist id="school-list">
+            <option value="Đại học Quốc Gia TP.HCM">
+            <option value="Đại học Bách Khoa TP.HCM">
+            <option value="Đại học Công nghệ Thông tin">
+            <option value="Đại học Sư phạm Kỹ thuật">
+          </datalist>
+        </fieldset>
+
+        <!-- Fieldset 2: Nội dung liên hệ -->
+        <fieldset>
+          <legend>Nội dung liên hệ</legend>
+
+          <label for="subject">Chủ đề:</label>
+          <select id="subject" name="subject">
+            <option value="">-- Chọn chủ đề --</option>
+            <option value="support">Hỗ trợ kỹ thuật</option>
+            <option value="study">Học tập / Trao đổi</option>
+            <option value="other">Khác</option>
+          </select>
+
+          <label>Ưu tiên liên hệ qua:</label>
+          <fieldset>
+            <legend>Kênh liên hệ</legend>
+            
+            <input type="radio" id="via-email" name="contact-via" value="email" checked>
+            <label for="via-email">Email</label>
+
+            <input type="radio" id="via-phone" name="contact-via" value="phone">
+            <label for="via-phone">Điện thoại</label>
+
+            <input type="radio" id="via-zalo" name="contact-via" value="zalo">
+            <label for="via-zalo">Zalo</label>
+          </fieldset>
+
+          <label for="message">Tin nhắn: *</label>
+          <textarea id="message" name="message" rows="5" 
+                    placeholder="Nhập nội dung tin nhắn..." 
+                    required minlength="10" maxlength="500"></textarea>
+
+          <label>
+            <input type="checkbox" name="agree" required> 
+            Tôi đồng ý với <a href="#">điều khoản sử dụng</a> *
+          </label>
+        </fieldset>
+
+        <button type="submit">Gửi tin nhắn</button>
+        <button type="reset">Xoá và nhập lại</button>
+
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <address>
+      Email: <a href="mailto:huy856813@gmail.com">huy856813@gmail.com</a> Điện thoại: <a href="tel:0123456789">0123 456 789</a>
+    </address>
+    <p>Cập nhật lần cuối: <time datetime="2026-06-01">01/06/2026</time></p>
+    <p>Bản quyền &copy; 2026 DƯƠNG NHẬT HUY.</p>
+  </footer>
+
+</body>
+</html>
