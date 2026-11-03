@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hồ Sơ Cá Nhân - Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <header>
+    <div class="logo">MyPortfolio</div>
+    <nav>
+      <ul>
+        <li><a href="#about">Giới thiệu</a></li>
+        <li><a href="#skills">Kỹ năng</a></li>
+        <li><a href="#projects">Dự án</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+      <button id="theme-toggle" type="button">Đổi giao diện</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <h1>Hồ Sơ Cá Nhân</h1>
+      <img src="https://via.placeholder.com/150" alt="Ảnh đại diện cá nhân" class="avatar">
+      <p>Xin chào! Tôi là sinh viên ngành CNTT, đam mê phát triển web và lập trình frontend.</p>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Bảng Kỹ Năng Học Tập</h2>
+      <div id="dynamic-skills"></div> 
+      
+      <table class="skills-table">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Tên kỹ năng</th>
+            <th>Trình độ</th>
+            <th>Kinh nghiệm</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>HTML5 & CSS3</td>
+            <td>Thành thạo</td>
+            <td>1 năm</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>JavaScript (ES6+)</td>
+            <td>Khá</td>
+            <td>6 tháng</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>SCSS / Sass</td>
+            <td>Cơ bản</td>
+            <td>3 tháng</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Các Dự Án Đã Thực Hiện</h2>
+      <div id="projects-container" class="projects-grid">
+        <p>Đang tải dữ liệu dự án...</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Liên Hệ Với Tôi</h2>
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="fullname">Họ và tên (*):</label>
+          <input type="text" id="fullname" name="fullname" required pattern="^[a-zA-ZÀ-ỹ\s]{2,50}$" placeholder="Nhập họ và tên">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email (*):</label>
+          <input type="email" id="email" name="email" required placeholder="example@domain.com">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Số điện thoại (*):</label>
+          <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="0901234567">
+        </div>
+
+        <div class="form-group">
+          <label for="contact-date">Ngày liên hệ:</label>
+          <input type="date" id="contact-date" name="contact-date">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Nội dung (*):</label>
+          <textarea id="message" name="message" required rows="4" placeholder="Nhập tin nhắn..."></textarea>
+        </div>
+
+        <button type="submit">Gửi tin nhắn</button>
+        <div id="form-response" class="response-message"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Hồ Sơ Cá Nhân. Đã đăng ký bản quyền.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
